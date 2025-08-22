@@ -2,7 +2,6 @@
 # Assignment 1 – FI 8090
 # Team Members: Milcah, Adam, Lane
 # ============================================
-print("Hello")
 # ============================================
 # PART 1 – Netflix Daily Stock Data (40 points)
 # Leader: 
