@@ -1,27 +1,39 @@
 # ============================================
 # Assignment 1 – FI 8090
 # Team Members: Milcah, Adam, Lane
-# ============================================
+# ===========================================
 # ============================================
 # PART 1 – Netflix Daily Stock Data (40 points)
 # Leader: 
 # ============================================
+pip install yfinance
 
-# Cell 1: Import Libraries (Lane)
-# ============================================
+
+# Cell 1: Import Libraries
+import yfinance as yf
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+# Importing yfinance gives the model access to yahoo finance data. Using the "as" funciton lets us assign this as yf
+# numpy is a general-purpose array-processing package. This program is assigned the abbreviation np using the "as" function.
+# pandas is a python-based data analytics toolkit that will allow us add data visualization tools to aid in our analysis.
 
 # Cell 2: Download Netflix Data (Lane)
 # Task: Download daily prices Jan 2, 2004 – Dec 31, 2019
-
+ticker='NFLX'
+nflx_df=yf.download('NFLX',start"2004-1-2",end="2019-12-31)
+# the above code assigns "nflx_df" an action of downloading netflix data within the specified date range.
 # Cell 3: Check Data (Lane)
 # Task: Inspect shape, data types
-
+type(nflx_df)
+# PLACEHOLDER: ADD IN FUNCTION FOR SIZE
 # Cell 4: Preview Data (Lane)
 # Task: Display first 5 rows
-
+nflx_df.head(5)
+# Using the head function combined with our defined action (nflx_df), we can tabulate the first 5 days of 'NFLX' stock data.
 # Cell 5: Plot Daily Prices (Lane)
 # Task: Line plot of daily closing prices
-
+nflx_df['Close'].plot(title="NFLX's Daily Stock Price")
 # Cell 6: Compute Log Returns (Lane)
 # Task: Calculate log returns from closing prices
 
